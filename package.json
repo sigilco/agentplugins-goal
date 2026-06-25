@@ -1,0 +1,33 @@
+{
+  "name": "agentplugins-goal",
+  "version": "1.0.0",
+  "description": "Autonomous goal-completion loop for AI agents. Set a goal, the agent runs until done — on every tier-1 harness.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Joaquin Terrasa",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/espetro/agentplugins-goal.git"
+  },
+  "keywords": [
+    "agentplugins",
+    "goal",
+    "autonomous",
+    "loop",
+    "pi-package",
+    "opencode-plugin",
+    "claude-code",
+    "codex"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "agentplugins build",
+    "validate": "agentplugins validate",
+    "lint": "agentplugins lint"
+  },
+  "devDependencies": {
+    "@agentplugins/core": "^0.3.0"
+  }
+}
