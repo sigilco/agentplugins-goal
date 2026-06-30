@@ -1,0 +1,109 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    devDependencies:
+      '@agentplugins/core':
+        specifier: ^0.6.0
+        version: 0.6.0
+
+packages:
+
+  '@agentplugins/compile@0.6.0':
+    resolution: {integrity: sha512-XlRxwGbD1Yqlji46gr4UXmgNn8TChoCLsSkA/TMnsE2zWsSqzcUC0D7WcTleZwDFr34AugGIRgs8yyiLnpU0wA==}
+
+  '@agentplugins/contract@0.6.0':
+    resolution: {integrity: sha512-KyHwW6C3MwmAkTSXmN++w6lzrThMTKiDDaRMpZtSczjsCQv7H3Z3JmZKfq1kjxZGCaVtdbMNsq1F+PTjgwNt6w==}
+
+  '@agentplugins/core@0.6.0':
+    resolution: {integrity: sha512-D7a3TJTvaU0BU4GCNKRY7VgLQvQIcOYLavi8WHyLvu29HsaCkqsUPAlSQt87YwIbTk5NXGYmPqMEU8PB+Uap3g==}
+
+  '@agentplugins/pipeline@0.6.0':
+    resolution: {integrity: sha512-vlgZ0SLUGQWLGW9HlFGKSuGYbnoDa0jwvmjs7qHnQpoNYgKF0yiol0VkytuC8wJRoMYwPbxxjYvlgK3/dR549w==}
+
+  '@agentplugins/schema@0.6.0':
+    resolution: {integrity: sha512-bnerVhkW+n0DdJ/P6vx/Pdqp9yR/tx8/1OEgMuCwx9AwbrhjPF4p2+JV2lSn1ePDni+ajFdAsbWClMKCMtrffA==}
+
+  '@agentplugins/security@0.6.0':
+    resolution: {integrity: sha512-RVGuYmxP74dqD2nlOHfncGe5g1BVO+EodDhYX5CCKYSpHSmqB2Q3mc0ypM0Af++rurGEwqJkg30RGquuBZfHmA==}
+
+  '@agentplugins/store@0.6.0':
+    resolution: {integrity: sha512-d/SDP2egJqKAmUTOU3ilUIAUkOQijeejP1Qyptc6xw84RppLBOD+MJkB0QDODPI8vBh1fxHL+E6g7T7WTcTAng==}
+
+  ajv@8.20.0:
+    resolution: {integrity: sha512-Thbli+OlOj+iMPYFBVBfJ3OmCAnaSyNn4M1vz9T6Gka5Jt9ba/HIR56joy65tY6kx/FCF5VXNB819Y7/GUrBGA==}
+
+  fast-deep-equal@3.1.3:
+    resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
+
+  fast-uri@3.1.3:
+    resolution: {integrity: sha512-i70LwGWUduXqzicKXWshooq+sWL1K3WUU5rKZNG/0i3a1OSoX3HqhH5WbWwTmqWfor4urUakGPiRQcleRZTwOg==}
+
+  json-schema-traverse@1.0.0:
+    resolution: {integrity: sha512-NM8/P9n3XjXhIZn1lLhkFaACTOURQXjWhV4BA/RnOv8xvgqtqpAX9IO4mRQxSx1Rlo4tqzeqb0sOlruaOy3dug==}
+
+  require-from-string@2.0.2:
+    resolution: {integrity: sha512-Xf0nWe6RseziFMu+Ap9biiUbmplq6S9/p+7w7YXP/JBHhrUDDUhwa+vANyubuqfZWTveU//DYVGsDG7RKL/vEw==}
+    engines: {node: '>=0.10.0'}
+
+  zod@4.4.3:
+    resolution: {integrity: sha512-ytENFjIJFl2UwYglde2jchW2Hwm4GJFLDiSXWdTrJQBIN9Fcyp7n4DhxJEiWNAJMV1/BqWfW/kkg71UDcHJyTQ==}
+
+snapshots:
+
+  '@agentplugins/compile@0.6.0':
+    dependencies:
+      '@agentplugins/contract': 0.6.0
+      '@agentplugins/pipeline': 0.6.0
+
+  '@agentplugins/contract@0.6.0':
+    dependencies:
+      zod: 4.4.3
+
+  '@agentplugins/core@0.6.0':
+    dependencies:
+      '@agentplugins/compile': 0.6.0
+      '@agentplugins/contract': 0.6.0
+      '@agentplugins/pipeline': 0.6.0
+      '@agentplugins/store': 0.6.0
+      zod: 4.4.3
+
+  '@agentplugins/pipeline@0.6.0':
+    dependencies:
+      '@agentplugins/contract': 0.6.0
+
+  '@agentplugins/schema@0.6.0':
+    dependencies:
+      ajv: 8.20.0
+
+  '@agentplugins/security@0.6.0':
+    dependencies:
+      '@agentplugins/schema': 0.6.0
+
+  '@agentplugins/store@0.6.0':
+    dependencies:
+      '@agentplugins/compile': 0.6.0
+      '@agentplugins/pipeline': 0.6.0
+      '@agentplugins/security': 0.6.0
+
+  ajv@8.20.0:
+    dependencies:
+      fast-deep-equal: 3.1.3
+      fast-uri: 3.1.3
+      json-schema-traverse: 1.0.0
+      require-from-string: 2.0.2
+
+  fast-deep-equal@3.1.3: {}
+
+  fast-uri@3.1.3: {}
+
+  json-schema-traverse@1.0.0: {}
+
+  require-from-string@2.0.2: {}
+
+  zod@4.4.3: {}

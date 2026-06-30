@@ -28,6 +28,6 @@
     "lint": "agentplugins lint"
   },
   "devDependencies": {
-    "@agentplugins/core": "^0.3.0"
+    "@agentplugins/core": "^0.6.0"
   }
 }
